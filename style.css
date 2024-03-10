@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Inter:wght@700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom:1px;
+
+}
+.cont {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease ;
+}
+.panel h3 {
+    color:rgba(0, 0, 0, 0.9);
+    font-size: 24px;
+    position: relative; /* Metni panelin içine göre konumlandır */
+    margin: 0px;
+    border-radius: 10px;
+    opacity: 0;
+    top: 72vh;
+    text-align: center; /* Metni yatayda ortala */
+    left: 0;
+    right: 0;
+    bottom: 10px; /* Metni istediğiniz yere taşıyın */
+    
+}
+
+.panel.panel.active{
+    flex:5;
+}
+.panel.active h3 {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: opacity .3s ease-in .3s,  background-color .3s ease-in .3s;
+}
+
+
+@media (max-width: 600px) {
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+    
+}
